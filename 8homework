@@ -1,0 +1,22 @@
+<?php
+class Counter{
+    public $count;
+    public function __get($name){
+        if ($name === 'count'){
+            return $this->count;
+
+            }
+        }
+        public function __set($name, $value){
+            if($name ==='count'){
+                $this->count =$value;
+            }
+        }
+    }
+
+    $counter = new Counter();
+    $counter->count = 5;
+    echo $counter->count;
+    $counter-> count = 10;
+    echo $counter->count;
+    ?>
